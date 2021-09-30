@@ -189,7 +189,7 @@ class SMPL(nn.Module):
                     default_betas = torch.tensor(betas, dtype=dtype)
 ################################################################################
             self.register_parameter(
-                'betas', nn.Parameter(default_betas, requires_grad=False))
+                'betas', nn.Parameter(default_betas, requires_grad=True))
 	
 #             self.register_parameter(
 #                 'betas', nn.Parameter(default_betas, requires_grad=True))
@@ -211,7 +211,7 @@ class SMPL(nn.Module):
 
 #################################################################################		
             global_orient = nn.Parameter(default_global_orient,
-                                         requires_grad=False)
+                                         requires_grad=True)
 	
 # 	    global_orient = nn.Parameter(default_global_orient,
 #                                          requires_grad=True)
