@@ -187,9 +187,13 @@ class SMPL(nn.Module):
                     default_betas = betas.clone().detach()
                 else:
                     default_betas = torch.tensor(betas, dtype=dtype)
-
+################################################################################
             self.register_parameter(
-                'betas', nn.Parameter(default_betas, requires_grad=True))
+                'betas', nn.Parameter(default_betas, requires_grad=False))
+	
+#             self.register_parameter(
+#                 'betas', nn.Parameter(default_betas, requires_grad=True))
+################################################################################
 
         # The tensor that contains the global rotation of the model
         # It is separated from the pose of the joints in case we wish to
