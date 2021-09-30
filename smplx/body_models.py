@@ -211,7 +211,7 @@ class SMPL(nn.Module):
 
 #################################################################################		
             global_orient = nn.Parameter(default_global_orient,
-                                         requires_grad=False)
+                                         requires_grad=True)
 	
 # 	    global_orient = nn.Parameter(default_global_orient,
 #                                          requires_grad=True)
