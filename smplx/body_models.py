@@ -189,7 +189,7 @@ class SMPL(nn.Module):
                     default_betas = torch.tensor(betas, dtype=dtype)
 ################################################################################
             self.register_parameter(
-                'betas', nn.Parameter(default_betas, requires_grad=True))
+                'betas', nn.Parameter(default_betas, requires_grad=False))
 	
 #             self.register_parameter(
 #                 'betas', nn.Parameter(default_betas, requires_grad=True))
