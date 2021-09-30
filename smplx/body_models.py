@@ -209,8 +209,14 @@ class SMPL(nn.Module):
                     default_global_orient = torch.tensor(
                         global_orient, dtype=dtype)
 
+#################################################################################		
             global_orient = nn.Parameter(default_global_orient,
-                                         requires_grad=True)
+                                         requires_grad=False)
+	
+# 	    global_orient = nn.Parameter(default_global_orient,
+#                                          requires_grad=True)
+#################################################################################
+
             self.register_parameter('global_orient', global_orient)
 
         if create_body_pose:
